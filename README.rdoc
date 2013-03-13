@@ -1,0 +1,48 @@
+= amazon-album-art
+
+A specialized Amazon AWS gem for finding Album Art running on top of the 'sucker' gem
+
+== INSTALLATION:
+
+  gem install amazon-album-art
+  
+== USAGE:
+
+Create a client
+
+  client = AmazonAlbumArt.new('YOUR_ACCESS_KEY', 'YOUR_SECRET_KEY')
+
+Search for all available image sizes
+
+  client.search("phish", "rift")
+  
+Or search for a medium and large image
+
+  client.search("phish", "rift", [:medium, :large])
+
+These methods will return a hash with the found artist and album names along with URL's to the requested image sizes. Example: 
+
+  { :artist => "Phish", :album => "Rift", :images => { :medium => "http://ecx.images-amazon.com/images/I/511RmbQV7dL._SL160_.jpg", :large => "http://ecx.images-amazon.com/images/I/511RmbQV7dL.jpg" } }
+
+* TODO: offer options to return different image sets (Primary, Vibrant etc...)
+
+== ACKNOWLEDGEMENTS 
+
+* The sucker gem by papercavalier does all the heavy lifting: https://github.com/papercavalier/sucker/
+* Grabbed some fuzzy match code from: http://code.coneybeare.net/amazon-album-covers-in-ruby-on-rails/
+
+== Contributing to amazon-album-art
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2011 John Allen. See LICENSE.txt for
+further details.
+
