@@ -1,3 +1,6 @@
+=Patched Album Art Gem
+Hosting here for support inside my application
+
 = amazon-album-art
 
 A specialized Amazon AWS gem for finding Album Art running on top of the 'sucker' gem
